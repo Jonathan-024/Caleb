@@ -1,9 +1,235 @@
-* {
-    margin: 0;
-    padding: 0;
+:root {
+  --background-color: #ffffff;
+  --text-color: #1a1a1a;
+  --primary-color: #0a66c2;
+  --accent-color: orange;
+  --nav-color: #2f5f87;
+  --links-color_hover: rgb(45, 45, 45);
+  --font-main: Arial, Helvetica, sans-serif;
 }
 
+/* Global */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Contrainte de largeur pour tout le contenu */
+body > * {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Header */
+.header {
+  background-color: var(--nav-color);
+}
+
+.navbar {
+    background-color: var(--nav-color);
+    display: flex;
+    width: clamp(1400px, 100vw, 1400px);
+    margin: auto;
+    color: white;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.links-home {
+    border-left: 1px solid white;
+    position: relative;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    height: 1rem;
+    padding: 1rem 1.5rem;
+    border-right: 1px solid white;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    padding: 0;
+    align-items: center;
+}
+
+.site-search {
+    width: 200px;
+    height: 25px;
+    padding-left: 1rem;
+}
+
+.search-container button {
+    padding: 2.5px 5px;
+    background-color: orange;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: white;
+}
+
+.search-container button:hover {
+    background-color: rgb(245, 159, 0);
+}
+
+/* Boutons latéraux */
+.sidebar {
+    background-color: black;
+    width: 130px;
+    height: 246px;
+    padding: 2rem 4rem;
+    position: absolute;
+    top: 48px;
+}
+
+.sidebar-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    top: 25px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.sidebar button {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.sidebar button:hover {
+    background-color: rgb(219, 142, 0);
+    color: rgb(217, 217, 217);
+}
+
+/* Main */
+
+/* Bannière */
+.banner {
+    display: flex;
+    background-color: #c1c1c1;
+    color: var(--text-color);
+    margin: auto;
+    width: 70%;
+    height: 310px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Informations */
+.infos {
+    display: flex;
+    margin: 0 5%;
+    justify-content: space-between;
+}
+
+.infos li {
+    list-style: none;
+    line-height: 2;
+}
+
+/* Produits */
+.products {
+    display: flex;
+    margin: 0 10%;
+    justify-content: space-between;
+}
+
+.product {
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+.product-btn {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.panier,
+.prix {
+    background-color: var(--nav-color);
+    color: white;
+    width: 100px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Autres informations */
+.se-divertir-s-informer {
+    margin: 5% 5%;
+    border-top: 2px solid black;
+}
+
+.se-divertir-s-informer li {
+    list-style: none;
+    line-height: 2;
+    position: relative;
+    right: 2.5rem;
+}
+
+.infos-se-divertir {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    display: flex;
+    gap: 5rem;
+}
+
+.Facebook-USSD {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.se-divertir-s-informer p {
+    color: orange;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--nav-color);
+}
+
+.container-footer {
+  background-color: var(--nav-color);
+  color: white;
+  padding: 1rem 0;
+  margin: auto;
+  text-align: center;
+  font-size: 0.9rem;
 }
