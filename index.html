@@ -10,8 +10,15 @@
     <body>
         <header class="header">
             <nav class="navbar">
-                <div class="nav-links">
-                    <a href="#" class="links-home">Accueil</a>
+                <button class="sidebar-menu" id="sidebar-menu" aria-label="Menu">
+                    <img src="images/barre-laterale-c.png" alt="Icone des boutons latérals" class="sidebar-icon">
+                </button>
+
+                <div class="nav-links" id="nav-links">
+                    <a href="#" class="links-home">
+                        <img src="images/maison.png" alt="Icone de l'accueil" class="home-icon">
+                        <img src="images/maison_hover.png" alt="Icone de l'accueil" class="home-icon-hover">
+                    </a>
                     <a href="#">Mobile</a>
                     <a href="#">Internet</a>
                     <a href="#">Se divertir & s'informer</a>
@@ -22,31 +29,53 @@
 
                 <div class="search-container">
                     <form method="get" action="#" class="search">
-                        <input type="search" id="site-search" name="q" placeholder="Rechercher dans le portail" class="site-search">
-                        <button type="submit" data-lang="send">🔍</button>
+                        <input type="search" id="site-search" name="q" placeholder="Rechercher..." class="site-search">
+                        <button type="submit" aria-label="Rechercher" data-lang="send">
+                            <img src="images/recherche.png" alt="Icone de recherche" class="search-icon">
+                        </button>
                     </form>
+                </div>
+
+                <div class="menu-toggle-container">
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Menu">
+                        <img src="images/menu-hamburger.png" alt="Icone de menu" class="menu-icon">
+                    </button>
+                    <div class="menu-toggle-links">
+                        <a href="#" class="toggle-item links-home">
+                            <img src="images/maison.png" alt="Icone de l'accueil" class="home-icon">
+                            <img src="images/maison_hover.png" alt="Icone de l'accueil" class="home-icon-hover">
+                        </a>
+                        <a href="#" class="toggle-item">Mobile</a>
+                        <a href="#" class="toggle-item">Internet</a>
+                        <a href="#" class="toggle-item">Se divertir & s'informer</a>
+                        <a href="#" class="toggle-item">Assistance</a>
+                        <a href="#" class="toggle-item">Espace d'agents</a>
+                        <a href="#" class="toggle-item">Entreprise</a>
+                    </div>
                 </div>
             </nav>
         </header>
 
         <!-- Boutons latéraux -->
-        <aside class="sidebar left">
-            <div class="sidebar-btn">
-                <button>Achat & ventes</button>
-                <button>Offres</button>
-                <button>Abonnez</button>
-                <button>Banque</button>
-            </div>
-        </aside>
+        <div id="sidebar-elements" class="sidebar-elements">
+            <aside class="sidebar left">
+                <div class="sidebar-btn">
+                    <button>Achat & ventes</button>
+                    <button>Offres</button>
+                    <button>Abonnez</button>
+                    <button>Banque</button>
+                </div>
+            </aside>
 
-        <aside class="sidebar right">
-            <div class="sidebar-btn">
-                <button>Shop mobile</button>
-                <button>Internet</button>
-                <button>Crédit & autres</button>
-                <button>Boutique</button>
-            </div>
-        </aside>
+            <aside class="sidebar right">
+                <div class="sidebar-btn">
+                    <button>Shop mobile</button>
+                    <button>Internet</button>
+                    <button>Crédit & autres</button>
+                    <button>Boutique</button>
+                </div>
+            </aside>
+        </div>
 
         <main>
             <!-- Bannière -->
@@ -96,7 +125,7 @@
                 <article class="product">
                     <h3>Sonny Ericson</h3>
                     <p>I98200</p>
-                    <img src="#" alt="Sonny Ericson">
+                    <img src="#" alt="Sonny Ericson" class="img-product">
                     <div class="product-btn">
                         <button class="panier">Panier</button>
                         <button class="prix">150$</button>
@@ -106,7 +135,7 @@
                 <article class="product">
                     <h3>Alcatel Pop</h3>
                     <p>MB1700</p>
-                    <img src="#" alt="Alcatel Pop">
+                    <img src="#" alt="Alcatel Pop" class="img-product">
                     <div class="product-btn">
                         <button class="panier">Panier</button>
                         <button class="prix">100$</button>
@@ -116,7 +145,7 @@
                 <article class="product">
                     <h3>Nokia Lumia</h3>
                     <p>MB1700</p>
-                    <img src="#" alt="Nokia Lumia">
+                    <img src="#" alt="Nokia Lumia" class="img-product">
                     <div class="product-btn">
                         <button class="panier">Panier</button>
                         <button class="prix">100$</button>
@@ -128,51 +157,41 @@
                 <article class="infos-se-divertir">
                     <div class="se-divertir">
                         <h3>Se divertir</h3>
-                        <ul>
-                            <li>Facebook USSD</li>
-                            <li>Chat SMS</li>
-                        </ul>                        
+                        <div>Facebook USSD</div>
+                        <div>Chat SMS</div>             
                     </div>
 
                     <div class="football">
                         <h3>Football</h3>
-                        <ul>
-                            <li>Football Fan Club</li>
-                        </ul>                        
+                        <div>Football Fan Club</div>
                     </div>
                 
                     <div class="forfait">
                         <h3>Forfait</h3>
-                        <ul>
-                            <li>Kozza Bilengi</li>
-                            <li>Lisungi</li>
-                        </ul>                        
+                        <div>Kozza Bilengi</div>
+                        <div>Lisungi</div>      
                     </div>
 
                     <div class="commerce">
                         <h3>Commerce</h3>
-                        <ul>
-                            <li>SMS Alerte Info</li>
-                        </ul>                        
+                        <div>SMS Alerte Info</div>    
                     </div>
                 
                     <div class="s-informer">
                         <h3>S'informer</h3>
-                        <ul>
-                            <li>SMS Alerte Info</li>
-                        </ul>                        
+                        <div>SMS Alerte Info</div>                     
                     </div>
                 </article>
 
                 <article class="Facebook-USSD">
                     <h3>Se divertir & s'informer > Facebook USSD ></h3>
                     <div class="image">
-                    <img src="#" alt="Television">
-                    <img src="#" alt="parasol">
+                        <img src="#" alt="Television">
+                        <img src="#" alt="parasol">
                     </div>
                 </article>
 
-                <p>Rester en contact avec ses amis sur facebook, change avec Orange.<br>
+                <p>Rester en contact avec ses amis sur facebook, change avec Orange.
                 Vous pouvez à présent surfer sur Facebook sans aucune connexion Internet !</p>
             </section>
         </main>
@@ -182,5 +201,7 @@
                 <p data-lang="footer">&copy; 2025 Shop Josué. All rights reserved.</p>
             </div>
         </footer>
+
+        <script src="js/script.js"></script>
     </body>
 </html>
