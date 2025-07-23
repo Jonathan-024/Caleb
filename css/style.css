@@ -183,13 +183,10 @@ body > * {
     color: rgb(217, 217, 217);
 }
 
-.sidebar-menu {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
+.sidebar-menu-container {
+    position: relative;
     display: none;
+    align-items: center;
 }
 
 /* Main */
@@ -197,8 +194,8 @@ body > * {
 /* Bannière */
 .banner {
     display: flex;
-    background-color: #c1c1c1;
-    color: var(--text-color);
+    background-color: rgb(95, 95, 95);
+    color: orange;
     margin: auto;
     width: 70%;
     height: 310px;
@@ -223,7 +220,7 @@ body > * {
 /* Produits */
 .products {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin: 0 10%;
     justify-content: center;
     gap: 15%;
@@ -235,20 +232,25 @@ body > * {
 }
 
 .img-product {
-    margin: 0.5rem 0 2rem;
+    width: 65%;
+    margin: 0;
+    position: relative;
+    bottom: 15px;
 }
 
 .product-btn {
     display: flex;
     justify-content: center;
-    gap: 10%;
+    position: relative;
+    bottom: 5px;
+    gap: 5%;
 }
 
 .panier,
 .prix {
     background-color: var(--nav-color);
     color: white;
-    width: 100px;
+    width: 80px;
     border: none;
     padding: 10px;
     font-weight: bold;
@@ -277,7 +279,15 @@ body > * {
 
 .image {
     display: flex;
-    gap: 5rem;
+    gap: 2.5rem;
+}
+
+.television,
+.parasol {
+    display: flex;
+    width: 150px;
+    position: relative;
+    left: 10px;
 }
 
 .Facebook-USSD {
@@ -285,6 +295,7 @@ body > * {
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 50px;
 }
 
 .se-divertir-s-informer p {
@@ -325,6 +336,12 @@ body > * {
 
     .nav-links a {
         padding: 1rem;
+    }
+
+    .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
@@ -474,11 +491,11 @@ body > * {
 
     .left {
         top: -48px;
-        left: 0;
+        left: -25px;
     }
 
     .right {
-        left: 0;
+        left: -25px;
         top: 200px;
         height: 246px;
     }
@@ -488,32 +505,18 @@ body > * {
         color: rgb(217, 217, 217);
     }
 
-    /* Sidebar responsive */
-    .sidebar-elements {
-        display: none;
-        flex-direction: column;
-        background-color: transparent;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        width: 225px;
-        height: 800px;
-        padding: 1rem;
-        z-index: 1000;
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-    }
-
-    .sidebar-elements.active {
+    .sidebar-menu-container {
         display: flex;
-        transform: translateX(0);
     }
 
     .sidebar-menu {
-        display: block;
+        display: flex;
+        background: none;
+        cursor: pointer;
+        border: none;
     }
 
-    .sidebar-icon {
+    .sidebar-menu .sidebar-icon {
         display: flex;
         width: 26px;
         height: 26px;
@@ -523,7 +526,41 @@ body > * {
     }
 
     .sidebar-icon:hover {
-        background-color: rgba(234, 234, 234, 0.597);
+        background-color: rgba(234, 234, 234, 0.500);
+    }
+
+    .sidebar-elements {
+        display: none;
+    }
+
+    .sidebar-elements-responsive {
+        flex-direction: column;
+        background: transparent;
+        top: 48px;
+        left: 0;
+        width: 0;
+        height: 478px;
+        border: none;
+        padding: 1rem;
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .sidebar-menu-container:hover .sidebar-elements-responsive,
+    .sidebar-menu:focus + .sidebar-elements-responsive {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .sidebar-elements.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
 
     /* Main */
@@ -602,6 +639,25 @@ body > * {
         margin: 1rem 0 2rem;
         gap: 5rem;
     }
+
+    .img-product {
+        width: 45%;
+        margin: 0.5rem 0 1rem;
+    }
+
+    .product h3 {
+        font-size: 1rem;
+    }
+
+    .product button {
+        font-size: 0.8rem;
+    }
+
+    .panier,
+    .prix {
+        width: 60px;
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -619,5 +675,44 @@ body > * {
     .menu-toggle-links::before {
         top: -13px;
         right: 15.5px;
+    }
+
+    /* Produits */
+    .products {
+        margin: 0 10%;
+        gap: 15%;
+    }
+
+    .product button {
+        font-size: 0.65rem;
+    }
+
+    .img-product {
+        width: 35%;
+        margin: 0.5rem 0 1rem;
+    }
+
+    .product-btn {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        bottom: 15px;
+        gap: 2%;
+    }
+
+    .image {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .television {
+        margin-left: 27px;
+    }
+
+    .television,
+    .parasol {
+        display: flex;
+        width: 110px;
+        position: relative;
     }
 }

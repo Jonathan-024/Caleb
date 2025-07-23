@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Shop Josué</title>
+        <title>Shop Caleb</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
         <header class="header">
             <nav class="navbar">
-                <button class="sidebar-menu" id="sidebar-menu" aria-label="Menu">
-                    <img src="images/barre-laterale-c.png" alt="Icone des boutons latérals" class="sidebar-icon">
-                </button>
+                <div class="sidebar-menu-container">
+                    <button class="sidebar-menu" id="sidebar-menu" aria-label="Menu">
+                        <img src="images/barre-laterale-c.png" alt="Icone des boutons latérals" class="sidebar-icon">
+                    </button>
+                    <div id="sidebar-elements-responsive" class="sidebar-elements-responsive">
+                        <aside class="sidebar left">
+                            <div class="sidebar-btn">
+                                <button>Achat & ventes</button>
+                                <button>Offres</button>
+                                <button>Abonnez</button>
+                                <button>Banque</button>
+                            </div>
+                        </aside>
+
+                        <aside class="sidebar right">
+                            <div class="sidebar-btn">
+                                <button>Shop mobile</button>
+                                <button>Internet</button>
+                                <button>Crédit & autres</button>
+                                <button>Boutique</button>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
 
                 <div class="nav-links" id="nav-links">
                     <a href="#" class="links-home">
@@ -123,9 +144,9 @@
             <!-- Produits -->
             <section class="products">
                 <article class="product">
-                    <h3>Sonny Ericson</h3>
+                    <h3>Sony Ericson</h3>
                     <p>I98200</p>
-                    <img src="#" alt="Sonny Ericson" class="img-product">
+                    <img src="images/sony-b.jpg" alt="Sony Ericson" class="img-product">
                     <div class="product-btn">
                         <button class="panier">Panier</button>
                         <button class="prix">150$</button>
@@ -135,7 +156,7 @@
                 <article class="product">
                     <h3>Alcatel Pop</h3>
                     <p>MB1700</p>
-                    <img src="#" alt="Alcatel Pop" class="img-product">
+                    <img src="images/alcatel-b.jpg" alt="Alcatel Pop" class="img-product">
                     <div class="product-btn">
                         <button class="panier">Panier</button>
                         <button class="prix">100$</button>
@@ -145,7 +166,7 @@
                 <article class="product">
                     <h3>Nokia Lumia</h3>
                     <p>MB1700</p>
-                    <img src="#" alt="Nokia Lumia" class="img-product">
+                    <img src="images/nokia-c.jpg" alt="Nokia Lumia" class="img-product">
                     <div class="product-btn">
                         <button class="panier">Panier</button>
                         <button class="prix">100$</button>
@@ -186,8 +207,8 @@
                 <article class="Facebook-USSD">
                     <h3>Se divertir & s'informer > Facebook USSD ></h3>
                     <div class="image">
-                        <img src="#" alt="Television">
-                        <img src="#" alt="parasol">
+                        <img src="images/tv-c.png" alt="Television" class="television">
+                        <img src="images/parasol.png" alt="Parasol" class="parasol">
                     </div>
                 </article>
 
@@ -198,10 +219,8 @@
 
         <footer class="footer">
             <div class="container-footer">
-                <p data-lang="footer">&copy; 2025 Shop Josué. All rights reserved.</p>
+                <p data-lang="footer">&copy; 2025 Shop Caleb. All rights reserved.</p>
             </div>
         </footer>
-
-        <script src="js/script.js"></script>
     </body>
 </html>
