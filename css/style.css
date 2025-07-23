@@ -194,7 +194,7 @@ body > * {
 /* Bannière */
 .banner {
     display: flex;
-    background-color: rgb(95, 95, 95);
+    background-color: rgb(30, 30, 30);
     color: orange;
     margin: auto;
     width: 70%;
